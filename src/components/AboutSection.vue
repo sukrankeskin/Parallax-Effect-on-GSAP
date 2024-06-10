@@ -19,34 +19,38 @@ export default {
   },
   setup() {
     onMounted(() => {
-      gsap.from(".about__img", {
-        scrollTrigger: {
-          trigger: ".about",
-          start: "top bottom",
-          scrub: 1.9,
+      gsap.fromTo(
+        ".about",
+        {
+          x: -100,
+          scale: 0.3,
+          rotation: 15,
         },
-        yPercent: 80,
-      });
-      gsap.from(".about__img img", {
-        scrollTrigger: {
-          trigger: ".about",
-          start: "top bottom",
-          scrub: 1.9,
-        },
-        scale: 1.6,
-      });
-      gsap.to(".about__txt", {
-        scrollTrigger: {
-          trigger: ".about__wrapp",
-          start: "top bottom",
-          scrub: 1.9,
-        },
-        yPercent: 50,
-      });
+        {
+          scrollTrigger: {
+            trigger: ".about",
+            start: "top 200%",
+            end: "top 50%",
+            scrub: 1,
+          },
+          x: 0,
+          scale: 1,
+          rotation: 0,
+          ease: "power3.out",
+        }
+      );
     });
   },
 };
 </script>
 <style scoped>
 @import url(../assets/styles.css);
+.about {
+  position: absolute;
+  top: 100vh;
+  width: 100%;
+  height: 100vh;
+  background: #252525;
+  padding: 6em 2em;
+}
 </style>
