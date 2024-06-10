@@ -28,7 +28,6 @@ section {
 
 .wrapp {
   width: 100%;
-  height: auto;
   overflow: hidden;
   z-index: 1;
 }
@@ -214,7 +213,7 @@ section {
   height: auto;
 }
 .benefits {
-  height: 50vh;
+  height: 100vh;
   position: relative;
 }
 
@@ -238,6 +237,7 @@ section {
 /* work ********/
 .work {
   padding-top: 150px;
+  height: 100vh;
 }
 
 .work__wrapp {

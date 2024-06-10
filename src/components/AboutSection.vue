@@ -46,8 +46,6 @@ export default {
 <style scoped>
 @import url(../assets/styles.css);
 .about {
-  position: absolute;
-  top: 100vh;
   width: 100%;
   height: 100vh;
   background: #252525;
