@@ -170,6 +170,10 @@ section {
 .about .section-title {
   text-align: left;
 }
+.about {
+  position: relative;
+  height: 100vh;
+}
 
 .about__wrapp {
   display: flex;
@@ -212,6 +216,10 @@ section {
   gap: 40px;
   width: 100%;
   height: auto;
+}
+.benefits {
+  height: 100vh;
+  position: relative;
 }
 
 .benefits__item {

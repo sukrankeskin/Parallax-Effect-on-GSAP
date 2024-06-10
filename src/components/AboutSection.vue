@@ -1,26 +1,6 @@
 <template>
   <section class="about">
-    <div class="about__wrapp">
-      <div class="about__img">
-        <img
-          src="https://dmitrinaumov.github.io/Paralax-effect-with-gsap-scrolltrigger/img/2.jpg"
-          alt="2"
-        />
-      </div>
-      <div class="about__txt">
-        <h2 class="section-title">
-          abo<span class="stroke">ut</span>
-          <span class="section-title__square"></span>
-        </h2>
-        <p class="about__p">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque esse
-          aspernatur fugit debitis quisquam. Quia exercitationem ipsum voluptas
-          voluptatum hic enim quo provident culpa possimus cupiditate! Dolorum
-          quae doloremque cum rerum ipsam inventore beatae, at odit, velit,
-          aspernatur minima! Corporis.
-        </p>
-      </div>
-    </div>
+    <Animation />
   </section>
 </template>
 
@@ -28,11 +8,15 @@
 import { onMounted } from "vue";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import Animation from "./Animation.vue";
 
 gsap.registerPlugin(ScrollTrigger);
 
 export default {
   name: "AboutSection",
+  components: {
+    Animation,
+  },
   setup() {
     onMounted(() => {
       gsap.from(".about__img", {
