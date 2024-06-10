@@ -1,7 +1,7 @@
 <template>
   <div id="luxy" class="wrapp">
     <HeaderSection />
-    <main class="main">
+    <main>
       <AboutSection />
       <BenefitsSection />
     </main>
